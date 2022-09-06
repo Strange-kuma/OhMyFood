@@ -120,19 +120,29 @@
     justify-content: center;
     align-items: center;
     background-color: $color-tertiary;
-    border-top-right-radius: 0.75rem;
-    border-bottom-right-radius: 0.75rem;
+    border-radius: 0 0.75rem 0.75rem 0;
     opacity: 0;
     width: 5rem;
     height: 6rem;
     right: 0;
     top: 0;
-    animation: slide-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    transition: 1.5s;
+
+    :hover {
+      opacity: 1;
+
+    }
   }
 
-  &:hover &_validation {
-    opacity: 1;
-    animation: slide-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  @keyframes slide-left {
+    from {
+      width: 0px;
+    }
+
+    to {
+      width: 5rem;
+    }
+
   }
 
   &_icon_container {

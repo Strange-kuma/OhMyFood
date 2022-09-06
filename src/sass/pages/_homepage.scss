@@ -1,4 +1,5 @@
 @use "sass:color";
+
 // ****************** Location ******************
 .header {
   position: relative;
@@ -10,30 +11,34 @@
   display: flex;
   justify-content: center;
   padding: 1.25rem;
-  background-color: rgba(234,234,234,255);
+  background-color: rgba(234, 234, 234, 255);
   font-size: 1.2rem;
 
   &_icon {
     margin-right: 1rem;
   }
+
   &_text {
     font-weight: 400;
   }
 }
-// ****************** Booking ******************
+
+// ****************** intro ******************
 
 .booking {
   padding: 4rem;
   text-align: center;
-  background-color: rgba(246,246,246,255);
+  background-color: rgba(246, 246, 246, 255);
 
   &_title {
     margin: 0;
   }
+
   &_description {
     font-weight: 200;
     margin: 1.5rem 0;
   }
+
   &_btn {
     @include button(primary);
     margin-bottom: 1rem;
@@ -100,13 +105,16 @@
 .restaurants {
   background-color: #f6f6f6;
   padding: 1.4rem;
+  width: 100%;
 }
 
 .cards {
   display: flex;
-  flex-direction: column;
-width: 100%;
+  flex-direction: row;
+  width: 100%;
 }
+
+
 
 .card {
   background-color: $color-light;
@@ -114,7 +122,8 @@ width: 100%;
   text-decoration: none;
   position: relative;
   box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.125);
-  width: calc(100% / 4);
+  width: calc(100%);
+
 
   &_img {
     height: 11rem;
@@ -141,7 +150,7 @@ width: 100%;
   &_footer {
     padding: 1rem;
     display: flex;
-    align-items:center;
+    align-items: center;
     position: relative;
 
   }
@@ -164,6 +173,7 @@ width: 100%;
   .card_heart .fas {
     display: none;
   }
+
   &_heart:hover .fas {
     display: inline;
   }
