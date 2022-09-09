@@ -87,31 +87,50 @@
 .dish {
   position: relative;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   padding: 1rem 1rem 0 1rem;
   border-radius: 0.75rem;
   box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 22%);
+
+  &_text {
+    width: 100%;
+
+    :hover {
+      animation: slide_left 1.5s;
+    }
+  }
+
+  @keyframes slide_left {
+    0% {
+      width: 100%;
+    }
+
+    100% {
+      width: calc(100% - 20%);
+    }
+  }
 
   &_title {
     margin: 0;
     text-overflow: ellipsis;
     white-space: nowrap;
-    overflow: hidden
+    overflow: hidden;
+    width: 100%;
   }
 
   &_description {
-    display: inline-flex;
+    display: flex;
+    justify-content: space-between;
+
     text-overflow: ellipsis;
     white-space: nowrap;
-    overflow: hidden
+    overflow: hidden;
   }
 
   &_price {
     font-weight: bold;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    flex: 2;
+
+
   }
 
   &_validation {
@@ -121,29 +140,16 @@
     align-items: center;
     background-color: $color-tertiary;
     border-radius: 0 0.75rem 0.75rem 0;
-    opacity: 0;
     width: 5rem;
     height: 6rem;
     right: 0;
     top: 0;
     transition: 1.5s;
 
-    :hover {
-      opacity: 1;
-
-    }
-  }
-
-  @keyframes slide-left {
-    from {
-      width: 0px;
-    }
-
-    to {
-      width: 5rem;
-    }
 
   }
+
+
 
   &_icon_container {
     height: 1.5rem;

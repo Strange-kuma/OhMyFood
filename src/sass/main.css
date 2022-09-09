@@ -144,12 +144,12 @@ body {
 .restaurants {
   background-color: #f6f6f6;
   padding: 1.4rem;
-  width: 100%;
 }
 
 .cards {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   width: 100%;
 }
 
@@ -160,6 +160,8 @@ body {
   position: relative;
   box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.125);
   width: 100%;
+  min-width: 300px;
+  margin-bottom: 20px;
 }
 .card_img {
   height: 11rem;
@@ -296,29 +298,50 @@ body {
 .dish {
   position: relative;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   padding: 1rem 1rem 0 1rem;
   border-radius: 0.75rem;
   box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.22);
+}
+.dish_text {
+  width: 100%;
+}
+.dish_text :hover {
+  -webkit-animation: slide_left 1.5s;
+          animation: slide_left 1.5s;
+}
+@-webkit-keyframes slide_left {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 80%;
+  }
+}
+@keyframes slide_left {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 80%;
+  }
 }
 .dish_title {
   margin: 0;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+  width: 100%;
 }
 .dish_description {
-  display: inline-flex;
+  display: flex;
+  justify-content: space-between;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
 }
 .dish_price {
   font-weight: bold;
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  flex: 2;
 }
 .dish_validation {
   position: absolute;
@@ -327,31 +350,11 @@ body {
   align-items: center;
   background-color: #99E2D0;
   border-radius: 0 0.75rem 0.75rem 0;
-  opacity: 0;
   width: 5rem;
   height: 6rem;
   right: 0;
   top: 0;
   transition: 1.5s;
-}
-.dish_validation :hover {
-  opacity: 1;
-}
-@-webkit-keyframes slide-left {
-  from {
-    width: 0px;
-  }
-  to {
-    width: 5rem;
-  }
-}
-@keyframes slide-left {
-  from {
-    width: 0px;
-  }
-  to {
-    width: 5rem;
-  }
 }
 .dish_icon_container {
   height: 1.5rem;

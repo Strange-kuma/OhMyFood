@@ -105,16 +105,14 @@
 .restaurants {
   background-color: #f6f6f6;
   padding: 1.4rem;
-  width: 100%;
 }
 
 .cards {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   width: 100%;
 }
-
-
 
 .card {
   background-color: $color-light;
@@ -122,8 +120,9 @@
   text-decoration: none;
   position: relative;
   box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.125);
-  width: calc(100%);
-
+  width: 100%;
+  min-width: 300px;
+  margin-bottom: 20px;
 
   &_img {
     height: 11rem;
