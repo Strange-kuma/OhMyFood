@@ -87,27 +87,24 @@
 .dish {
   position: relative;
   display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
-  padding: 1rem 1rem 0 1rem;
+
   border-radius: 0.75rem;
   box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 22%);
+  overflow: hidden;
 
-  &_text {
-    width: 100%;
-
-    :hover {
-      animation: slide_left 1.5s;
-    }
+  &:hover &_validation {
+    animation: slide 1s;
   }
 
-  @keyframes slide_left {
-    0% {
-      width: 100%;
-    }
+  &_validation_container {
+    display: flex;
+    align-items: center;
+  }
 
-    100% {
-      width: calc(100% - 20%);
-    }
+  &_text {
+    padding: 1rem;
   }
 
   &_title {
@@ -121,7 +118,6 @@
   &_description {
     display: flex;
     justify-content: space-between;
-
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
@@ -129,27 +125,32 @@
 
   &_price {
     font-weight: bold;
-
-
+    margin-right: 15px;
   }
 
   &_validation {
-    position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: $color-tertiary;
     border-radius: 0 0.75rem 0.75rem 0;
-    width: 5rem;
-    height: 6rem;
-    right: 0;
-    top: 0;
-    transition: 1.5s;
-
-
+    width: 0;
+    height: 100%;
+    transition: all 700ms;
+    opacity: 0;
+ 
   }
 
-
+  @keyframes slide {
+    from {
+      opacity: 1;
+      width: 0;
+    }
+    to{
+      opacity: 1;
+      width: 5rem;
+    }
+  }
 
   &_icon_container {
     height: 1.5rem;

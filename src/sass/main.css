@@ -298,33 +298,22 @@ body {
 .dish {
   position: relative;
   display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
-  padding: 1rem 1rem 0 1rem;
   border-radius: 0.75rem;
   box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.22);
+  overflow: hidden;
+}
+.dish:hover .dish_validation {
+  -webkit-animation: slide 1s;
+          animation: slide 1s;
+}
+.dish_validation_container {
+  display: flex;
+  align-items: center;
 }
 .dish_text {
-  width: 100%;
-}
-.dish_text :hover {
-  -webkit-animation: slide_left 1.5s;
-          animation: slide_left 1.5s;
-}
-@-webkit-keyframes slide_left {
-  0% {
-    width: 100%;
-  }
-  100% {
-    width: 80%;
-  }
-}
-@keyframes slide_left {
-  0% {
-    width: 100%;
-  }
-  100% {
-    width: 80%;
-  }
+  padding: 1rem;
 }
 .dish_title {
   margin: 0;
@@ -342,19 +331,38 @@ body {
 }
 .dish_price {
   font-weight: bold;
+  margin-right: 15px;
 }
 .dish_validation {
-  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #99E2D0;
   border-radius: 0 0.75rem 0.75rem 0;
-  width: 5rem;
-  height: 6rem;
-  right: 0;
-  top: 0;
-  transition: 1.5s;
+  width: 0;
+  height: 100%;
+  transition: all 700ms;
+  opacity: 0;
+}
+@-webkit-keyframes slide {
+  from {
+    opacity: 1;
+    width: 0;
+  }
+  to {
+    opacity: 1;
+    width: 5rem;
+  }
+}
+@keyframes slide {
+  from {
+    opacity: 1;
+    width: 0;
+  }
+  to {
+    opacity: 1;
+    width: 5rem;
+  }
 }
 .dish_icon_container {
   height: 1.5rem;
