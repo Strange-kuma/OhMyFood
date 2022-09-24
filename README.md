@@ -27,3 +27,9 @@ Liste des modification par dates :
   - Ajout et renommer les different fichier image
   - Création des cartes restaurant et de leur badge "Nouveau" 
   - Création du footer 
+
+Reste a faire :
+- le responsive de carte restaurant 
+- animation du check  rotate 
+- animation du loader
+- animation fade in au chargement

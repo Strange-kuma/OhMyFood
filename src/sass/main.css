@@ -282,7 +282,6 @@ body {
 
 .restaurant {
   display: flex;
-  flex-direction: column;
   gap: 1rem;
   background-color: #f6f6f6;
   padding: 1rem;
@@ -293,6 +292,10 @@ body {
   margin-top: 0.5rem;
   width: 2.4rem;
   border: 2px solid #99E2D0;
+}
+.restaurant .droite {
+  display: flex;
+  flex-direction: column;
 }
 
 .dish {
