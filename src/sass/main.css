@@ -299,7 +299,6 @@ body {
   position: relative;
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
   border-radius: 0.75rem;
   box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.22);
   overflow: hidden;
@@ -314,6 +313,8 @@ body {
 }
 .dish_text {
   padding: 1rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .dish_title {
   margin: 0;
