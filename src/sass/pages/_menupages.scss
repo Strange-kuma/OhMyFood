@@ -125,13 +125,14 @@
     animation-delay: 0.3s;
   }
 
-
-
-
-
   &:hover &_validation {
     animation: slide 1s;
   }
+
+  &:hover &_icon {
+    animation: rotate 1s;
+  }
+
 
   &_validation_container {
     display: flex;
@@ -178,7 +179,7 @@
 
   }
 
- 
+
 
   &_icon_container {
     height: 1.5rem;

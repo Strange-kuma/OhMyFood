@@ -27,6 +27,5 @@ debut du projet le : 09/08/2022
   - Création des cartes restaurant et de leur badge "Nouveau"
   - Création du footer
 
-## Reste a faire
-
-- animation du check  rotate
+- le 28/09/22 :
+  - finition du site

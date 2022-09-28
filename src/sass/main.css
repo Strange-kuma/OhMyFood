@@ -386,6 +386,10 @@ body {
   -webkit-animation: slide 1s;
           animation: slide 1s;
 }
+.dish:hover .dish_icon {
+  -webkit-animation: rotate 1s;
+          animation: rotate 1s;
+}
 .dish_validation_container {
   display: flex;
   align-items: center;
@@ -547,5 +551,21 @@ body {
   }
   100% {
     transform: translateY(0px);
+  }
+}
+@-webkit-keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
   }
 }/*# sourceMappingURL=main.css.map */
