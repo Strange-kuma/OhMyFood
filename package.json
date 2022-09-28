@@ -4,7 +4,7 @@
   "description": "Troisième projet du parcours développeur web chez OpenClassrooms. L'objectif est d'intégrer et de dynamiser à l'aide d'animations CSS en utilisant le préprocesseur Sass, la maquette d'un site de restauration nommé \"Ohmyfood\".",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "sass": "sass --watch src/sass/main.scss:src/sass/main.css --style compressed"
   },
   "repository": {
     "type": "git",
