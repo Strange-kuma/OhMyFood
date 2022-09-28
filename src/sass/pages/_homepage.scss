@@ -1,5 +1,57 @@
 @use "sass:color";
 
+// ****************** Loader de page ******************
+#loaderdepage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 5000;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  animation: fade-out 2s ease-out both;
+
+  
+
+  span {
+    font-family: "Shrikhand", "cursive";
+    font-size: 50px;
+    animation: up 1.5s infinite;
+
+    &:nth-child(2) {
+      animation-delay: 0.1s;
+    }
+
+    &:nth-child(3) {
+      animation-delay: 0.2s;
+    }
+
+    &:nth-child(4) {
+      animation-delay: 0.3s;
+    }
+
+    &:nth-child(5) {
+      animation-delay: 0.4s;
+    }
+
+    &:nth-child(6) {
+      animation-delay: 0.5s;
+    }
+
+    &:nth-child(7) {
+      animation-delay: 0.6s;
+    }
+
+    &:nth-child(8) {
+      animation-delay: 0.7s;
+    }
+
+  
+  }
+
+}
+
 // ****************** Location ******************
 .header {
   position: relative;

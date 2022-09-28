@@ -1,0 +1,47 @@
+@keyframes fade-out {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+        z-index: -50;
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slide {
+    from {
+        opacity: 1;
+        width: 0;
+    }
+
+    to {
+        opacity: 1;
+        width: 5rem;
+    }
+}
+
+@keyframes up {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        color: purple;
+        transform: translateY(20px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}

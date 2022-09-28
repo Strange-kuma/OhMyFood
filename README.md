@@ -29,7 +29,4 @@ debut du projet le : 09/08/2022
 
 ## Reste a faire
 
-- le responsive de carte restaurant
 - animation du check  rotate
-- animation du loader
-- animation fade in au chargement
