@@ -162,6 +162,7 @@
 .cards {
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
   flex-wrap: wrap;
   width: 100%;
 }
@@ -172,8 +173,10 @@
   text-decoration: none;
   position: relative;
   box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.125);
-  width: 100%;
+  width: calc(97% / 4 );
   min-width: 300px;
+  height: 250px;
+ 
   margin-bottom: 20px;
 
   &_img {
