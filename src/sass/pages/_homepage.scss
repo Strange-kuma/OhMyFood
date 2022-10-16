@@ -5,15 +5,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
+  position: fixed;
   z-index: 5000;
   width: 100%;
   height: 100%;
   background-color: #fff;
-  animation: fade-out 2s ease-out both;
-
-  
-
+  animation: fade-out 3s ease-out both; 
   span {
     font-family: "Shrikhand", "cursive";
     font-size: 50px;

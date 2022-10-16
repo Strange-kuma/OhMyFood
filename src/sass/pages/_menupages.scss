@@ -103,6 +103,19 @@
   min-width: 300px;
 }
 
+@media (max-width: 995px) {
+  .column {
+    width: calc(100% / 2 - 20px);
+
+  }
+}
+@media (max-width: 669px) {
+  .column {
+    width: calc(100% / 1 - 20px);
+
+  }
+}
+
 .dish {
   position: relative;
   display: flex;
